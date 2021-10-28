@@ -8,10 +8,9 @@ console.log(typeof(usuario)) // string
 
 // parseInt() - retorna um int piso do valor de entrada
 let maquina = parseInt(Math.random()*3 + 1);
+console.log(maquina);
 
 // um switch interno, dentro de cada case de um switch externo
-
-
 
 // exemplo de switch
 let x = 0;
@@ -31,4 +30,3 @@ console.log(text)
 
 
 
-console.log(maquina);

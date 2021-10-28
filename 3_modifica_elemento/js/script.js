@@ -16,7 +16,7 @@ let titulo = document.querySelector('h1');
 
 // alterar cor de fundo do body
 let body = document.querySelector('body');
-// body.style.backgroundColor = '#333';
+body.style.backgroundColor = '#333';
 
 
 // alterar cor de fundo E cor de texto do primeiro item de lista
@@ -31,7 +31,7 @@ let item = document.querySelector('li');
 // agora para todos os itens da lista
 let itens = document.querySelectorAll('li');
 for (let item of itens) {
-  //item.classList.add('dark');
+  // item.classList.add('dark');
 }
 
 
