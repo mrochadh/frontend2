@@ -59,9 +59,11 @@ item.innerText = 'primeiro item';
 lista.appendChild(item);
 */
 
-for (let i = 1; i <= 5; i++) {
+let itensStr = ['comprar pao', 'levar o pantera pra passear', 'dar um mergulho no mar'];
+
+for (let i = 0; i < itensStr.length; i++) {
   let item = document.createElement('li');
-  item.innerText = `${i}o elemento da lista`;
+  item.innerText = itensStr[i];
   lista.appendChild(item);
 }
 

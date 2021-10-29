@@ -41,7 +41,7 @@ for (let item of itens) {
 function colorChange(){
   body.classList.toggle('dark');
 
-  /*
+  /* o mesmo que:
   if (body.classList.contains('dark')) {
     body.classList.remove('dark');
   } else {
