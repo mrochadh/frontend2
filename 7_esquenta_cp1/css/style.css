@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+main {
+  padding: 3rem;
+  background-color: burlywood;
+  color:brown;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  margin: 0.7rem;
+  margin-bottom: 3rem;
+  padding: 0.8rem;
+  width: 8rem;
+  background-color: brown;
+  color: burlywood;
+  border: 0;
+  border-radius: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+input[type='text'], input[type='password'] {
+  height: 2rem;
+  margin: 0.7rem;
+  border: 0;
+  border-radius: 0.5rem;
+}
+
+h2 {
+  margin-bottom: 2rem;
+}
