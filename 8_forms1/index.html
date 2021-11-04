@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Formulários I</title>
+</head>
+<body>
+
+  <main class="flex">
+    <h1>Formulários I</h1>
+
+    <form class="flex" action="/cadastrar">
+      <input type="text" name="nome" id="nome" placeholder=" Nome">
+      <input type="text" name="sobrenome" id="sobrenome" placeholder=" Sobrenome">
+
+      <div>
+        <label for="periodo">Período:</label>
+        <input type="radio" name="periodo" value="full time" >full time</input>
+        <input type="radio" name="periodo" value="manha" checked>manhã</input>
+        <input type="radio" name="periodo" value="tarde">tarde</input>
+        <input type="radio" name="periodo" value="noite" >noite</input>
+      </div>
+      
+      <div>
+        <input type="checkbox" id="condicoes"> Li e aceito as condições</input>
+      </div>
+      
+      <input type="submit" id="btn" value="Efetivar matrícula" class="button">
+    </form>
+
+    <h2>Saída</h2>
+
+    <p></p>
+  </main>
+
+  <script src="js/script.js"></script>  
+</body>
+</html>
