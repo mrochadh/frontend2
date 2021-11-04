@@ -39,6 +39,7 @@ function cadastrar(event) {
   Período: ${periodo}
   Condições: ${condTxt}`.toLowerCase().replaceAll('A', '@'); // CaSE SENsITive != CASE SENSITIVE
 
+  
 }
 
 
