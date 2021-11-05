@@ -1,48 +1,48 @@
-let nome = document.querySelector('#nome');
-let sobrenome = document.querySelector('#sobrenome');
-let cond = document.querySelector('input[type=\'checkbox\']');
+// pega todos os elementos que tenham name=periodo - apenas os radio buttons
+//document.querySelectorAll('input[type=\'radio\']'); // pega pelo atributo type
+let periodoS = document.getElementsByName('periodo'); // pela pelo atributo name
+
+// acessando elementos da lista retornada
+//console.log(periodoS[0].value, periodoS[0].checked);
+//console.log(periodoS[1].value, periodoS[1].checked);
+
 let btn = document.querySelector('#btn');
-let par = document.querySelector('p');
 
-// pegando todos os inputs que são type=radio
-let periodos = document.querySelectorAll('input[type=\'radio\']');
-// let periodos = document.getElementsByName('periodo');
+btn.addEventListener('click', matricula);
 
-// verificando alguns
-//console.log(periodos[0].value, periodos[0].checked);
-//console.log(periodos[1].value, periodos[1].checked);
+function matricula(event) {
+  event.preventDefault();
 
-
-//console.log(`condições: ${cond.checked}`);
-
-btn.addEventListener('click', cadastrar);
-
-function cadastrar(event) {
-  event.preventDefault(); // impedir que o formulário envie os dados para uma outra rota (backend)
-
-  let periodo;
-  for (let i = 0; i < periodos.length; i++) {
-    if (periodos[i].checked) {
-      periodo = periodos[i].value;
+  let period;
+  for (periodo of periodoS) {
+    if (periodo.checked) {
+      period = periodo.value;
       break;
     }
   }
+  /*
+  for (let i = 0; i < periodoS.length; i++) {
+    console.log(periodoS[i].value);
+    if (periodoS[i].checked) {
+      console.log('marcado!');
+      break;
+    }
+  }
+  */
 
-  let condTxt;
-  cond.checked ? condTxt = 'leu e aceitou as condições' : condTxt = 'aceitAaaaaaaaaaaaaaaaa';
+  let cond = document.getElementById('condicoes');
+  cond.checked ? condTxt = 'Leu e aceitou' : condTxt = 'Não aceitou, tem que aceitar';
 
-  // Mensagem: Matricula efetivada com sucesso!
-  // Nome: ??? Sobrenome: ??? Periodo: ??? Condições: Aceitou/Não Aceitou
-  par.innerText = `Matrícula efetivada com sucesso!
-  Nome: ${nome.value}
-  Sobrenome: ${sobrenome.value}
-  Período: ${periodo}
-  Condições: ${condTxt}`.toLowerCase().replaceAll('A', '@'); // CaSE SENsITive != CASE SENSITIVE
+  document.querySelector('p').innerText = `Nome: ${document.querySelector('#nome').value}
+  Sobrenome: ${document.querySelector('#sobrenome').value}
+  Período: ${period}
+  Condições: ${condTxt}`.toUpperCase().replaceAll('A', '@'); // expressões regulares
+  // Case SEnSitiVE != case sensitive
 
-  
 }
 
 
 
-
+let txt = "       um texto no meio          outro texto no fim       ";
+console.log(txt.trim());
 

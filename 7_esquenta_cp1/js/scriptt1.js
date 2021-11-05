@@ -18,7 +18,6 @@ function inserirLista(event) {
   li.innerText = field1.value;
   document.querySelector('ol').appendChild(li);
 
-
   let img = document.createElement('img');
   img.setAttribute('src', field1.value);
   document.querySelector('main').appendChild(img);
