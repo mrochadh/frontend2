@@ -51,9 +51,13 @@ function validaForm() {
     erros.push('o nome não pode conter dígitos numéricos');
   }
 
+  // mais validações aqui
+
   // se encontramos algum erro (ou seja, o tamanho do array é maior que 0)
   if (erros.length > 0) {
-    console.log(`todos os erros: ${erros}`);
+    alert(`todos os erros: ${erros.join('\n')}`);
+  } else {
+    
   }
   
 
