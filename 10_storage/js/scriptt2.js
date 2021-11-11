@@ -1,7 +1,7 @@
 let nome = document.querySelector('#nome');
 let sobrenome = document.querySelector('#sobrenome');
 let btn = document.querySelector('#btn');
-let p = document.querySelector('p');
+let ol = document.querySelector('ol');
 
 
 let nomesArray = [];
@@ -13,6 +13,7 @@ if ( nomesStrStorage !== null ) {
   // picota o a string de nomes do storage em um array
   nomesArray = nomesStrStorage.split('\n');
   console.log(`nomesArray onload: ${nomesArray}`);
+  nomesArray.forEach( nome => ol.innerHTML += `<li>${nome}</li>`);
 }
 
 btn.addEventListener('click', (event) => {
