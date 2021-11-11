@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>AJAX</title>
+</head>
+<body>
+
+  <main class="flex">
+    <h1>Buscar repos do GitHub com AJAX</h1>
+
+    <form class="flex" name="matricula" action="/aloGitHub" method="GET">
+      <input type="text" name="nome" id="nome" placeholder=" Usuário GitHub">
+      <input type="submit" id="btn" value="Listar repos" class="button">
+    </form>
+
+    <ol></ol>
+    
+  </main>
+
+  <script src="js/script.js"></script>  
+</body>
+</html>
