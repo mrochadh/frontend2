@@ -36,3 +36,26 @@ btn.addEventListener('click', event => {
     });
 
 });
+
+btn.addEventListener('click', buscarRepo);
+
+async function buscarRepo(evt) {
+  evt.preventDefault();
+
+  let url = `https://api.github.com/users/${nome.value}`;
+
+  const response = await fetch(url);
+  
+  const arrayRepos = await response.json();
+
+  console.log(arrayRepos);
+
+  arrayRepos.forEach( repo => {
+    // loga o campo name
+    console.log(repo.name);
+    // adiciona o name em mais um item de lista
+    ol.innerHTML += `<li>${repo.name}</li>`;
+  });
+}
+
+
